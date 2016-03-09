@@ -2,42 +2,155 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esther & Brian's Wedding</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/site.css">
   </head>
+
   <body>
   	<section class="title">
   		<img class="cover-photo" src="../resources/images/Wedding+Ring+Photo+on+Succulent.jpeg" />
   		<title>Esther & Brian Are Getting Married!</title>
   		<ul class="nav">
-  			<li>Our Story</li>
-  			<li>Wedding Day</li>
-  			<li>Getting Here</li>
-  			<li>Enjoying Your Stay</li>
-  			<li>Registry</li>
+  			<li><a href="#our-story">Our Story</a></li>
+  			<li><a href="#event-details">Wedding Day</a></li>
+  			<li><a href="#getting-here">Getting Here</a></li>
+  			<li><a href="#things-to-do">Enjoying Your Stay</a></li>
+  			<li><a href="#registry">Registry</a></li>
   		</ul>
   	</section>
   	
-  	<section class="our-story">
-  		<h1>Our Story</h1>
-  		<p>We met at C.R.E.A.M.</p>
-  	</section>
-  	<section class="event-details">
-  		<h1>Wedding Day</h1>
-  		<p>Date, location, atmosphere</p>
-  	</section>
-  	<section class="getting-here">
-  		<h1>Getting Here</h1>
-  		<p>Flights & Hotels</p>
-  	</section>
-  	<section class="things-to-do">
-  		<h1>Enjoying Your Stay</h1>
-  		<p>Our favorite restaurants & things to do</p>
-  	</section>
-  	<section class="registry">
-  		<h1>Registry</h1>
-  	</section>
+  	<div class="content">
+  		<section id="our-story">
+	  		<h1>Our Story</h1>
+	  		<p>We met at C.R.E.A.M.</p>
+	  	</section>
+	  	<section id="event-details">
+	  		<h1>Wedding Day</h1>
+	  		<p>Date, location, atmosphere</p>
+	  		<p>22801 Big Basin Way, Saratoga, CA 95070</p>
+	  	</section>
+	  	<section id="getting-here">
+	  		<h1>Getting Here</h1>
+	  		<div class="mdl-tabs mdl-js-tabs">
+		  		<div class="mdl-tabs__tab-bar">
+		  			<a href="#flights" class="mdl-tabs__tab button is-active">Flights</a>
+		    		<a href="#hotels" class="mdl-tabs__tab button">Accomodations</a>
+		  		</div>
+		  		<div class="mdl-tabs__panel " id="flights">
+		  			<div class="panel-container">
+		  				<div class="item-panel">
+			  				<h5 class="panel-highlight-info panel-content">Airport</h5>
+			  				<img class="panel-image" src="resources/images/sfo.jpg" />
+			  				<h3 class="panel-title panel-content">San Francisco</h3>
+			  				<ul class="airport-details panel-details panel-content">
+			  					<li class="Distance">45 minutes</li>
+			  					<li class="trasportation"><span>Rental</span><span>Uber</span><span>Taxis</span></li>
+			  					<li class="about">SFO is usually the cheapest and easiest to find flights. It's a straightforward drive down US 101 or the scenic I-280. Rush hours are M-F 4PM to 7:30PM & 6:30AM to 10AM. Rush hour travel can double travel time. We'd recommend I-280 during rush hour--at least you get to be stuck looking at pretty scenary.</li>
+			  				</ul>
+			  			</div>
+			  			<div class="item-panel">
+			  				<h5 class="panel-highlight-info panel-content">Airport</h5>
+			  				<img class="panel-image" src="resources/images/sjc.jpg" />
+			  				<h3 class="panel-title panel-content">San Jose</h3>
+			  				<ul class="airport-details panel-details panel-content">
+			  					<li class="Distance">20 minutes</li>
+			  					<li class="trasportation"><span>Rental</span><span>Taxis</span></li>
+			  					<li class="about">San Jose is the most convient airport, sometimes has cheaper flights, but flights usually have at least 1 layover.</li>
+			  				</ul>
+			  			</div>
+			  			<div class="item-panel">
+			  				<h5 class="panel-highlight-info panel-content">Airport</h5>
+			  				<img class="panel-image" src="resources/images/oak.jpeg" />
+			  				<h3 class="panel-title panel-content">Oakland</h3>
+			  				<ul class="airport-details panel-details panel-content">
+			  					<li class="Distance">65 minutes</li>
+			  					<li class="trasportation"><span>Rental</span><span>Uber</span><span>Taxis</span></li>
+			  					<li class="about">Oakland is the third Bay Area airport. Your drive will take you down I-880. Rush hour is M-F 4PM to 7:30PM & 6:30AM to 10AM. Rush hour traffic can double travel time.</li>
+			  				</ul>
+			  			</div>
+		  			</div>
+		  		</div>
+		  		<div class="mdl-tabs__panel is-active" id="hotels">
+		   			<div class="panel-container">
+		   				<div class="item-panel">
+			  				<img class="panel-image" src="resources/images/airbnb.png" />
+			  				<h3 class="panel-title panel-content">Airbnb</h3>
+			  				<ul class="hotel-details panel-details panel-content">
+			  					<li class="price"><span>$</span>$$$</li>
+			  					<li class="distance">10-30 mins</li>
+			  					<li class="about">Our top recommendation for out-of-town guests. You get the cozy feeling of home at better prices than hotels. If you're like us, pick a home with fun decorations.</li>
+			  					<li class="airbnb-recomendation book-near">Book near <span>Saratoga</span>, <span>Cupertino</span> or <span>Los Gatos</span>.</li>
+			  					<li class="airbnb-recomendation book-room">Choose a <span>private room</span> to make local friends or choose <span>entire home</span> for privacy.</li>
+			  					<li class="hotel-link"><a class="button" target="_blank" href="https://www.airbnb.com/s/Saratoga--CA?checkin=08%2F12%2F2016&checkout=08%2F16%2F2016&guests=2&room_types%5B%5D=Entire+home%2Fapt&sw_lat=37.02655945928386&sw_lng=-122.18823719220188&ne_lat=37.734588843787904&ne_lng=-121.36426258282688&search_by_map=true&zoom=10&ss_id=ikv6bodf&s_tag=B1kT4cJf">Visit</a></li>
+			  				</ul>
+			  			</div>
+			  			<div class="item-panel">
+			  				<img class="panel-image" src="resources/images/aloft-cupertino.jpg" />
+			  				<h3 class="panel-title panel-content">Aloft </h3>
+			  				<ul class="hotel-details panel-details panel-content">
+			  					<li class="chain">Starwood Suites</li>
+			  					<li class="price"><span>$$$</span>$</li>
+			  					<li class="distance">20 mins</li>
+			  					<li class="address"><span class="street">10165 N De Anza Blvd</span><span class="city">Cupertino, CA 95014</span></li>
+			  					<li class="phone">(408)766-7000</li>
+			  					<li class="hotel-link"><a class="button" target="_blank" href="http://www.aloftcupertino.com">Visit</a></li>
+			  				</ul>
+			  			</div>
+			  			<div class="item-panel">
+			  				<img class="panel-image" src="resources/images/courtyard.jpg" />
+			  				<h3 class="panel-title panel-content">Courtyard Cupertino</h3>
+			  				<ul class="hotel-details panel-details panel-content">
+			  					<li class="chain">Marriott</li>
+			  					<li class="price"><span>$$</span>$$</li>
+			  					<li class="distance">25 mins</li>
+			  					<li class="address"><span class="street">10605 N Wolfe Rd</span><span class="city">Cupertino, CA 95014</span></li>
+			  					<li class="phone">(408)252-9100</li>
+			  					<li class="hotel-link"><a class="button" target="_blank" href="http://www.marriott.com/hotels/travel/sjccu-courtyard-san-jose-cupertino/">Visit</a></li>
+			  				</ul>
+			  			</div>
+			  			<div class="item-panel">
+			  				<img class="panel-image" src="resources/images/Larkspur-landing.jpg" />
+			  				<h3 class="panel-title panel-content">Larkspur Landing</h3>
+			  				<ul class="hotel-details panel-details panel-content">
+			  					<li class="chain">Larkspur Landing</li>
+			  					<li class="price"><span>$</span>$$$</li>
+			  					<li class="distance">22 mins</li>
+			  					<li class="address"><span class="street">550 W Hamilton Ave</span><span class="city">Campbell, CA 95008</span></li>
+			  					<li class="phone">(408)364-1514</li>
+			  					<li class="hotel-link"><a class="button" target="_blank" href="http://www.larkspurhotels.com/campbell/">Visit</a></li>
+			  				</ul>
+			  			</div>
+		   			</div>
+		  		</div>
+			</div>
+	  	</section>
+	  	<section id="things-to-do">
+	  		<h1>Enjoy Your Stay</h1>
+			<div class="mdl-tabs mdl-js-tabs">
+		  		<div class="mdl-tabs__tab-bar">
+		  			<a href="#fav-eats" class="mdl-tabs__tab button is-active">Favorite Eats</a>
+		    		<a href="#fav-places" class="mdl-tabs__tab button">Favorite Places</a>
+		  		</div>
+		  		<div class="mdl-tabs__panel is-active" id="fav-eats">
+		   			 <p>C.R.E.A.M. Obviously</p>
+		  		</div>
+		  		<div class="mdl-tabs__panel" id="fav-places">
+		   			<p>Scenic drive down the Pacific Coast Highway.</p>
+		  		</div>
+			</div>
+	  	</section>
+	  	<section id="registry button">
+	  		<h1>Registry</h1>
+	  		<p>We are more than fortunate enough to have just about everything we need for our new lives together. For the traditional gift giver, we hope our registry provides some useful and fun suggestions. If not, we'd more than appreciate a monetary gift to go towards our honeymoon and new adventures. Please know at the end of the day however, your presence on our big day is what is most important to us. Thank you in advance! :)</p>
+	  		<a class="honeymoon registry button" target="_blank" href="https://cash.me/$EstherBrianWedding">Honeymoon Registry</a>
+	  		<a class="registry button" target="_blank" href="">Crate & Barrel</a>
+	  	</section>
+  	</div>
+
+	<script src="js/material.min.js"></script>
+	<script src="js/site.js"></script>
   </body>
 </html>

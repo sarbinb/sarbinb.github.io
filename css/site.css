@@ -9,6 +9,33 @@ body {
 	min-height: 100%;
 	z-index: 1;*/
 	font-family: 'Lato', sans-serif;
+	color: #272727;
+}
+
+a {
+	text-decoration: none;
+	color: #272727;
+}
+a:visited {
+	color: #272727;
+}
+
+h1 {
+	text-align: center;
+}
+
+.button {
+	border: 2px solid #272727;
+	padding: 13px 26px;
+	text-align: center;
+	display: inline-block;
+	background: white;
+}
+
+.button:hover, 
+.mdl-tabs__tab.is-active {
+	color: white;
+	background: #272727;
 }
 
 /* Title Area */
@@ -36,4 +63,120 @@ title {
 .nav li {
 	list-style: none;
 	font-weight: 300;
+}
+
+.content {
+
+}
+
+.content section {
+	
+}
+
+.mdl-tabs__tab-bar {
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+.mdl-tabs__tab {
+	width: 165px;
+}
+
+.mdl-tabs__panel {
+	display: none;
+}
+
+.mdl-tabs__panel.is-active {
+	display: block;
+}
+
+#getting-here {
+	background: #faefeb;
+	margin: 0 auto;
+	padding: 0 0 60px;
+}
+
+.panel-container {
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+}
+
+.item-panel {
+	width: 300px;
+	background: white;
+	box-shadow: 0 0 10px rgba(0,0,0,0.05);
+	margin: 0 10px;
+	padding: 18px 0 76px;
+	position: relative;
+}
+
+.panel-content {
+	padding: 0 22px;
+}
+
+.item-panel ul {
+	padding: 0 22px;
+}
+
+.item-panel li {
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+.panel-image {
+	width: 100%;
+	height: auto;
+}
+
+.trasportation span {
+	padding-right: 16px;
+}
+
+/* Hotels */
+.hotel-details {
+	display: flex;
+	flex-flow: column;
+}
+
+.price {
+	color: #CECECE;
+}
+
+.price span {
+	color: #272727;
+}
+
+.address {
+	display: inline-flex;
+	flex-flow: column;
+}
+
+.hotel-details .airbnb-recomendation span {
+	font-weight: 700;
+}
+
+.hotel-link {
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+}
+
+.hotel-link a {
+	position: relative;
+	left: -50%;
+}
+
+/* Registry */
+
+#registry {
+	margin-bottom: 50px;
+}
+
+.registry {
+	width: 400px;
+	height: 200px;
+}
+.honeymoon {
+	
 }
