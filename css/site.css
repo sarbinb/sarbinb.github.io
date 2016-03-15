@@ -29,6 +29,7 @@ h1 {
 img {
 	width: 100%;
 	height: auto;
+	display: block;
 }
 
 .button {
@@ -80,6 +81,19 @@ title {
 	
 }
 
+@media screen and (max-width: 640px) {
+	title {
+		font-size: 46px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	title {
+		font-size: 36px;
+	}
+}
+
+
 /* Temportary hide these sections until they're completed */
 #our-story,
 #things-to-do,
@@ -106,6 +120,7 @@ title {
 
 #event-details {
 	position: relative;
+	min-height: 330px;
 }
 
 .wedding-details-panel {
@@ -124,6 +139,44 @@ title {
 	background-position: 400px;
 }
 
+@media screen and (max-width: 1145px) {
+    .wedding-location {
+        height: 330px;
+        width: auto;
+        float: right;
+    }
+
+    .wedding-details-panel {
+    	top: 30px;
+    	left: 30px;
+    }
+}
+
+@media screen and (max-width: 985px) {
+    .wedding-location {
+        margin-right: -10%
+    }
+}
+
+@media screen and (max-width: 866px) {
+	#event-details {
+		display: flex;
+		flex-flow: row wrap-reverse;
+	}
+
+	.wedding-location {
+		float: right;
+		margin-right: -50%;
+	}
+    .wedding-details-panel {
+    	position: relative;
+    	top: 0;
+    	left: 0;
+    	box-shadow: none;
+    	width: 100%;
+    }
+}
+
 #getting-here {
 	background: #faefeb;
 	margin: 0 auto;
@@ -132,6 +185,7 @@ title {
 
 .panel-container {
 	display: flex;
+	flex-flow: row wrap;
 	align-items: stretch;
 	justify-content: center;
 }
@@ -199,6 +253,13 @@ title {
 .hotel-link a {
 	position: relative;
 	left: -50%;
+}
+
+@media screen and (max-width: 640px) {
+	.item-panel {
+		width: 100%;
+		margin: 10px 15px;
+	}
 }
 
 /* Registry */

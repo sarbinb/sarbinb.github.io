@@ -1,4 +1,4 @@
-$('a[href^="#"]').on('click', function(event) {
+/*$('a[href^="#"]').on('click', function(event) {
     var target = $(this.href);
     if( target.length ) {
         event.preventDefault();
@@ -6,4 +6,4 @@ $('a[href^="#"]').on('click', function(event) {
             scrollTop: target.offset().top
         }, 1000);
     }
-});
+});*/
