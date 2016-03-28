@@ -9,7 +9,7 @@ body {
 	min-height: 100%;
 	z-index: 1;*/
 	/* font-family: 'Lato', sans-serif; */
-	font-family: 'Courier';
+	font-family: 'Bitter', 'Lekton', 'Courier';
 	color: #272727;
 	background: #faefeb;
 }
@@ -24,12 +24,22 @@ a:visited {
 
 h1 {
 	text-align: center;
+	font-family: 'Sacramento', cursive;
+	font-size: 2.5em;
 }
 
 img {
 	width: 100%;
 	height: auto;
 	display: block;
+}
+
+section {
+	border-bottom: 1px solid #FD9981;
+}
+
+.content section:last-of-type {
+	border: 0;
 }
 
 .button {
@@ -54,12 +64,13 @@ img {
 
 title {
 	display: block;
-	color: white;
+	color: wheat;
 	font-weight: 100;
 	font-size: 75px;
 	text-align: center;
 	position: absolute;
 	top: 40px;
+	font-family: 'Sacramento', cursive;
 }
 
 .nav {
@@ -81,20 +92,9 @@ title {
 	
 }
 
-@media screen and (max-width: 640px) {
-	title {
-		font-size: 46px;
-	}
-}
-
-@media screen and (max-width: 400px) {
-	title {
-		font-size: 36px;
-	}
-}
-
 
 /* Temportary hide these sections until they're completed */
+.nav, 
 #our-story,
 #things-to-do,
 #registry {
@@ -127,60 +127,33 @@ title {
 	position: absolute;
 	background: white;
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
-	left: 60px;
-	top: 40px;
+	left: 40px;
+	top: 30px;
 	padding: 20px;
 }
 
 .wedding-details-panel h1 {
-	background-image: url("../resources/images/rings.png");
+	margin-left: -30px;
+}
+
+.wedding-details-panel h1:after {
+	content: '';
+	width: 100px;
+	height: 100px;
+	position: absolute;
 	background-repeat: no-repeat;
+	background-image: url("../resources/images/rings.png");
 	background-size: 46px;
-	background-position: 400px;
-}
-
-@media screen and (max-width: 1145px) {
-    .wedding-location {
-        height: 330px;
-        width: auto;
-        float: right;
-    }
-
-    .wedding-details-panel {
-    	top: 30px;
-    	left: 30px;
-    }
-}
-
-@media screen and (max-width: 985px) {
-    .wedding-location {
-        margin-right: -10%
-    }
-}
-
-@media screen and (max-width: 866px) {
-	#event-details {
-		display: flex;
-		flex-flow: row wrap-reverse;
-	}
-
-	.wedding-location {
-		float: right;
-		margin-right: -50%;
-	}
-    .wedding-details-panel {
-    	position: relative;
-    	top: 0;
-    	left: 0;
-    	box-shadow: none;
-    	width: 100%;
-    }
+	background-position-x: 10px;
 }
 
 #getting-here {
 	background: #faefeb;
 	margin: 0 auto;
 	padding: 0 0 60px;
+
+	/* Turning off for now because getting here is the last element */
+	border: none;
 }
 
 .panel-container {
@@ -194,7 +167,7 @@ title {
 	width: 300px;
 	background: white;
 	box-shadow: 0 0 10px rgba(0,0,0,0.05);
-	margin: 0 10px;
+	margin: 0 10px 10px;
 	padding: 18px 0 76px;
 	position: relative;
 }
@@ -255,13 +228,6 @@ title {
 	left: -50%;
 }
 
-@media screen and (max-width: 640px) {
-	.item-panel {
-		width: 100%;
-		margin: 10px 15px;
-	}
-}
-
 /* Registry */
 
 #registry {
@@ -274,4 +240,98 @@ title {
 }
 .honeymoon {
 	
+}
+
+
+/* Responsive Section */
+@media screen and (max-width: 1145px) {
+    .wedding-location {
+        height: 330px;
+        width: auto;
+        float: right;
+    }
+
+    .wedding-details-panel {
+    	top: 30px;
+    	left: 30px;
+    }
+}
+
+@media screen and (max-width: 985px) {
+    .wedding-location {
+        margin-right: -10%
+    }
+}
+
+@media screen and (max-width: 866px) {
+	p {
+		font-size: 14px;
+	}
+
+	h1 {
+		font-size: 32px;
+	}
+
+	.wedding-location {
+		display: none;
+	}
+
+	.wedding-location-bg {
+		background: url("../resources/images/wedding-location-with-location.png");
+		background-size: cover;
+		background-position-x: 90%; 
+		width: 100%;
+		height: 330px;
+	}
+
+    .wedding-details-panel {
+    	position: relative;
+    	top: 0;
+    	left: 0;
+    	box-shadow: none;
+    	width: 100%;
+    	padding: 20px 0;
+    }
+
+    .wedding-details-panel h1 {
+    	background: none;
+    	background-size: 26px;
+    }
+
+    .wedding-details-panel h1:after {
+		background-size: 26px;
+		background-position-x: 5px;
+    }
+
+    .wedding-details-panel p {
+    	padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+	title {
+		font-size: 46px;
+	}
+
+	.item-panel {
+		width: 100%;
+		margin: 10px 15px;
+	}
+
+	#getting-here {
+		padding-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.mdl-tabs__tab-bar a {
+		font-size: 12px;
+		width: 85px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	title {
+		font-size: 36px;
+	}
 }
