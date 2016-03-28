@@ -64,7 +64,7 @@ section {
 
 title {
 	display: block;
-	color: wheat;
+	color: #5B514E;
 	font-weight: 100;
 	font-size: 75px;
 	text-align: center;
@@ -244,6 +244,12 @@ title {
 
 
 /* Responsive Section */
+@media screen and (max-width: 1200px) {
+	title {
+		font-size: 74px;
+	}
+}
+
 @media screen and (max-width: 1145px) {
     .wedding-location {
         height: 330px;
