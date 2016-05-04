@@ -271,6 +271,10 @@ title {
 }
 
 @media screen and (max-width: 866px) {
+	title {
+		color: #5B514E;
+	}
+
 	p {
 		font-size: 14px;
 	}
@@ -316,9 +320,9 @@ title {
 }
 
 @media screen and (max-width: 640px) {
-	title {
+	/*title {
 		font-size: 46px;
-	}
+	}*/
 
 	.item-panel {
 		width: 100%;
@@ -338,7 +342,7 @@ title {
 }
 
 @media screen and (max-width: 400px) {
-	title {
+	/*title {
 		font-size: 36px;
-	}
+	}*/
 }
