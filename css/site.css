@@ -1,14 +1,4 @@
 body {
-	//background-image: url("../resources/images/Wedding+Ring+Photo+on+Succulent.jpeg");
-	//background-image: url("../resources/images/2014-12-20_0004.jpg");
-	/*background-size: cover;
-	background-repeat: no-repeat;
-	position: absolute;
-	min-width: 100%;
-	width: 100%;
-	min-height: 100%;
-	z-index: 1;*/
-	/* font-family: 'Lato', sans-serif; */
 	font-family: 'Bitter', 'Lekton', 'Courier';
 	color: #272727;
 	background: #faefeb;
@@ -75,14 +65,29 @@ title {
 }
 
 .nav {
-	color: white;
-	position: absolute;
-	top: 100px;
+	display: flex;
+	justify-content: space-around;
+	background-color: white;
+	margin: 0;
+	padding: 0;
 }
 
 .nav li {
 	list-style: none;
 	font-weight: 300;
+	text-align: center;
+	width: 20%;
+}
+
+.nav a {
+	display: block;
+	padding: 25px 0;
+	width: 100%;
+}
+
+.nav a:hover {
+	background-color: #FD9981;
+	color: white	;
 }
 
 .content {
@@ -119,9 +124,94 @@ title {
 	display: block;
 }
 
+/*********** Our Story ***********/
+.story-content {
+	max-width: 600px;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	flex-flow: column;
+}
+
+#our-story p {
+	max-width: 500px;
+	border-radius: 8px;
+	padding: 10px;
+}
+
+.brian-talk {
+	background: white;
+	align-self: flex-start;
+}
+
+.esther-talk {
+	background: #FEE7C0;
+	align-self: flex-end;
+}
+
+.brian-talk:nth-of-type(1)::after {
+	content:'Brian';
+	position: absolute;
+	left: 10px;
+	top: 9px;
+	font-size: 10px;
+	color: gray;
+}
+
+.esther-talk:nth-of-type(2)::after {
+	content:'Esther';
+	position: absolute;
+	right: 10px;
+	top: 120px;
+	font-size: 10px;
+	color: gray;
+}
+
+.story-img {
+	position: absolute;
+}
+
+.story-part1-1 {
+	width: 252px;
+	left: -206px;
+	top: -11.6px;
+}
+
+.story-part1-2 {
+	width: 252px;
+	right: -185px;
+	top: -11.6px;
+}
+
+.story-part2-1 {
+	width: 320px;
+	right: -285px;
+	top: 12.7%;
+}
+
+.story-part2-2 {
+	width: 670px;
+	left: -448px;
+	top: 10.6%;
+}
+
+.story-part3-1 {
+	top: 29.4%;
+	left: -16px;
+	z-index: -1;
+}
+
+.story-part5-1 {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+/*********** Event Details ***********/
+
 #event-details {
 	position: relative;
 	min-height: 330px;
+	clear: both;	/* Only required if I go with the chat bubble design*/
 }
 
 .wedding-details-panel {
@@ -228,19 +318,283 @@ title {
 	position: relative;
 	left: -50%;
 }
+/************** Enjoying your Stay ******************/
+#things-to-do {
+	padding: 5px 0 30px;
+	background: white;
+	border-top: 1px solid #FD9981;;
+}
 
-/* Registry */
+.eat-panel,
+.places-panel {
+	display: flex;
+	flex-flow: wrap;
+	margin: 0 auto;
+	max-width: 960px;
+	justify-content: center;
+}
+
+.eatary,
+.places {
+	position: relative;
+	text-indent: 110px;
+}
+
+.eatary::before,
+.places::before,
+.itenerary::before  {
+	content: '';
+	width: 100px;
+	height: 100px;
+	background-size: 100px 100px;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	pointer-events: none;
+}
+
+.eatary::after,
+.places::after {
+	content: '';
+	position: absolute;
+	top: 65px;
+	color: lightgray;
+	pointer-events: none;
+	font-size: 14px;
+}
+
+.places span {
+	font-size: 14px;
+	color: lightgray;
+}
+
+.eatary:hover::before,
+.places:hover::before {
+	background-color: #faefeb;
+	border-radius: 100px;
+}
+
+.eatary a,
+.places a {
+	width: 320px;
+	padding: 45px 0 55px;
+	display: block;
+}
+
+.eatary:hover,
+.eatary:hover::after,
+.places:hover,
+.places:hover::after {
+	text-decoration: underline;
+}
+
+.dinner::before {
+	background-image: urL("../resources/images/food_icons/dinner.png");
+}
+
+.dessert::before {
+	background-image: urL("../resources/images/food_icons/dessert.png");
+}
+
+.boba::before {
+	background-image: urL("../resources/images/food_icons/boba.png");
+}
+
+.coffee::before {
+	background-image: urL("../resources/images/food_icons/coffee.png");
+}
+
+.beer::before {
+	background-image: urL("../resources/images/food_icons/beer.png");
+}
+
+.breakfast::before {
+	background-image: urL("../resources/images/food_icons/breakfast.png");
+}
+
+.cream::after {
+	content: 'Ice-cream Sandwich';
+}
+
+.joes::after {
+	content: 'Ravioli & Meatball';
+}
+
+.solfood::after {
+	content: 'Free-range Chicken';
+}
+
+.snocrave::after {
+	content: 'Mango Shaved-Ice';
+}
+
+.teaera::after {
+	content: 'Pearl Milk Tea';
+}
+
+.shaomountain::after {
+	content: 'Fish in Two Sauces';
+}
+
+.philz::after {
+	content: 'Tesora';
+}
+
+.originalgravity::after {
+	content: 'Local Beer & Brautwurst';
+}
+
+.homeroom::after {
+	content: 'Gilroy Garlic Mac & Cheese';
+}
+
+.ocean::before {
+	background-image: urL("../resources/images/place_icons/ocean.png");
+}
+
+.outdoors::before {
+	background-image: urL("../resources/images/place_icons/outdoors.png");
+}
+
+.shopping::before {
+	background-image: urL("../resources/images/place_icons/shopping.png");
+}
+
+.touristy::before {
+	background-image: urL("../resources/images/place_icons/touristy.png");
+}
+
+.wine::before {
+	background-image: urL("../resources/images/place_icons/wine.png");
+}
+
+.sf::after {
+	content: 'San Francisco';
+}
+
+.mb::after {
+	content: 'Monterary Bay';
+}
+
+.bs::after {
+	content: 'Big Sur';
+}
+
+.ys::after {
+	content: 'Yosemite';
+}
+
+.sr::after {
+	content: 'Saratoga';
+}
+
+.np::after {
+	content: 'Napa Valley';
+}
+
+.so::after {
+	content: 'Sonoma';
+}
+
+.sanfrancisco::before {
+	top: auto;
+	background-image: urL("../resources/images/itenerary_icons/sanfrancisco.png");
+}
+
+.napa::before {
+	top: auto;
+	background-image: urL("../resources/images/itenerary_icons/napa.png");
+}
+
+.route1::before {
+	top: auto;
+	background-image: urL("../resources/images/itenerary_icons/route1.png");
+}
+
+.sanjose::before {
+	top: auto;
+	background-image: urL("../resources/images/itenerary_icons/sanjose.png");
+}
+
+.yosemite::before {
+	top: auto;
+	background-image: urL("../resources/images/itenerary_icons/yosemite.png");
+}
+
+#day-itenaries {
+	max-width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#day-itenaries p,
+#day-itenaries h3{
+	padding-left: 120px;
+}
+
+#day-itenaries p {
+	padding-bottom: 20px;
+	line-height: 1.4;
+}
+
+
+/***************** Registry *******************/
+.ws-registry,
+.ws-registry.button:hover {
+	background-image: url("../resources/images/food_registry.png");
+	background-size: cover;
+}
+
+.honeymoon-registry,
+.honeymoon-registry.button:hover {
+	background-image: url("../resources/images/honeymoon_registry.jpg");
+	background-size: cover;
+}
 
 #registry {
-	margin-bottom: 50px;
+	margin-bottom: 100px;
+	text-align: center;
+}
+
+#registry p {
+	text-align: left;
+	margin: 0 auto 30px;
+	max-width: 960px;
+	line-height: 24px;
 }
 
 .registry {
 	width: 400px;
 	height: 200px;
+	position: relative;
 }
+
 .honeymoon {
 	
+}
+
+.registry:hover.button::before,
+.registry:hover.button::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(39,39,39,0.7);
+	font-size: 40px;
+}
+
+.honeymoon-registry:hover.button::after {
+	content: 'Honeymoon Fund';
+	background-color: transparent;
+	padding-top:80px;
+}
+
+.ws-registry:hover.button::after {
+	content: 'Williams-Sonoma';
+	background-color: transparent;
+	padding-top:80px;
 }
 
 
