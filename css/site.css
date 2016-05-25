@@ -206,6 +206,47 @@ title {
 	margin-bottom: 30px;
 }
 
+.photo-gallery {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+}
+
+.photo-gallery .gallery-item {
+	width: 5%;
+	position: relative;
+}
+
+.photo-gallery .gallery-item::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.2);
+	top: 0;
+	left: 0;
+}
+
+.photo-gallery .gallery-item:hover::before {
+	content: '';
+	position: absolute;
+	width: 80%;
+	height: 80%;
+	border: 1px solid white;
+	top: 10%;
+	left: 10%;
+}
+
+.photo-gallery .gallery-item:hover::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.5);
+	top: 0;
+	left: 0;
+}
+
 /*********** Event Details ***********/
 
 #event-details {
@@ -351,6 +392,14 @@ title {
 	top: 10px;
 	left: 0;
 	pointer-events: none;
+}
+
+.itenerary a {
+	color: #FD9981;
+}
+
+.itenerary a:hover {
+	text-decoration: underline;
 }
 
 .eatary::after,
@@ -699,4 +748,39 @@ title {
 	/*title {
 		font-size: 36px;
 	}*/
+}
+
+/*
+
+ Justified Gallery 
+
+
+ */
+
+/** Image Gallery Zoom Items **/
+.image-source-link {
+	color: #98C3D1;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	/* ideally, transition speed should match zoom duration */
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
 }
