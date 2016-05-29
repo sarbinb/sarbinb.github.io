@@ -24,17 +24,21 @@ $(document).ready(function() {
   $('.photo-gallery').magnificPopup({
     delegate: 'a',
     type: 'image',
+    tLoading: 'Loading image #%curr%...',
     closeOnContentClick: false,
     closeBtnInside: false,
     mainClass: 'mfp-with-zoom mfp-img-mobile',
     image: {
       verticalFit: true,
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
       titleSrc: function(item) {
-        return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+        return item.el.attr('title');
       }
     },
     gallery: {
-      enabled: true
+      enabled: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+
     },
     zoom: {
       enabled: true,
