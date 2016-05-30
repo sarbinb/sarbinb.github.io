@@ -419,7 +419,6 @@ title {
 .eatary,
 .places {
 	position: relative;
-	text-indent: 110px;
 }
 
 .eatary::before,
@@ -438,10 +437,6 @@ title {
 .itenerary a {
 	color: #FD9981;
 }
-/*
-.itenerary a:hover {
-	text-decoration: underline;
-}*/
 
 .eatary::after,
 .places::after {
@@ -451,6 +446,7 @@ title {
 	color: lightgray;
 	pointer-events: none;
 	font-size: 14px;
+	left: 110px;
 }
 
 .places span {
@@ -465,8 +461,8 @@ title {
 
 .eatary a,
 .places a {
-	width: 320px;
-	padding: 45px 0 55px;
+	width: 210px;
+	padding: 45px 0 55px 110px;
 	display: block;
 }
 
@@ -564,6 +560,10 @@ title {
 
 .ys::after {
 	content: 'Yosemite';
+}
+
+.lt::after {
+	content: 'Emerald Bay';
 }
 
 .sr::after {
@@ -917,11 +917,6 @@ title {
 		padding-left: 13px;
 		padding-right: 13px;
 	}
-
-	.eatary a, 
-	.places a {
-		width: 100%;
-	}
 }
 
 @media screen and (max-width: 480px) {
@@ -960,8 +955,18 @@ title {
 
 	.eatary, 
 	.places {
-		text-indent: 83px;
 		width: 100%;
+	}
+
+	.eatary::after, 
+	.places::after {
+		left: 85px;
+	}
+
+	.eatary a, 
+	.places a {
+		font-size: 14px;
+		padding-left:85px;
 	}
 }
 
